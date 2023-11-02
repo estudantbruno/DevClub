@@ -2,10 +2,10 @@
     - Capturar dados de entrada
     - Input - Entrada
 
-    Action -> define para qual url ser´a enviado os dados, vazio envia para a mesma url
+    Action -> define para qual url sera enviado os dados, vazio envia para a mesma url
     Method
-        - GET
-        - POST
+        - GET - envia os dados via url
+        - POST - envia os dados de uma forma nao visivel, por arquivo. mais usado para enviar dados importantes
 -->
 
 <!DOCTYPE html>
@@ -17,7 +17,7 @@
 </head>
 <body>
     <h1>Digite seu endereço</h1>
-    <form action="">
+    <form action="post" enctype="multipart/form-data"> <!--toda vez que for enviar um arquivo no forms usar enctype="multipart/form-data para comunicar o servidor que est´a indo um arquivo junto com o formulario-->
         <label for=""> Rua:
             <input type="text" name="rua" autocomplete="street-address"/>
         </label>
